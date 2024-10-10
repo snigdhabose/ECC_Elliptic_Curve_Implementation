@@ -1,7 +1,40 @@
-Elliptic Curve Implementation - cryptography
+# 🔐 ECC Elliptic Curve Implementation
+
+## 📋 Project Overview
+This project demonstrates the implementation of **Elliptic Curve Cryptography (ECC)** over a finite field. The elliptic curve used is defined as:
+
+`y^2 mod 263 = (x^3 + x + 1) mod 263`
+
+The group elements (points on the curve) and cryptographic operations (point addition, scalar multiplication) are implemented to support elliptic curve encryption and decryption.
+
+## ✨ Key Features
+- **Curve Definition**: `y^2 = x^3 + x + 1 mod 263`
+- **Elliptic Curve Points**: Contains 263 points including (1, 23), (87, 61), etc.
+- **🔑 Public Key Encryption**: Implements ECC-based encryption and decryption using Alice and Bob's public keys.
+- **🧮 Finite Field Arithmetic**: Supports point addition, doubling, and scalar multiplication.
+
+### 🔐 Example Encryption
+- **Public Keys**:
+  - A's public key: `Pa = 51 × (148, 27) = (3, 89)`
+  - B's public key: `Pb = 212 × (148, 27) = (61, 52)`
+- **🔐 Encryption**: Alice sends an encrypted message to Bob: 
+`Encrypted Message = {(3, 89), 240, 222}`
+- **🔓 Decryption**: Bob decrypts the message and obtains the plaintext `(10, 89)`.
+
+
+## 🚀 Getting Started
+To run the ECC implementation:
+1. 📥 Clone the repository.
+2. 💻 Import the project into your environment.
+3. 🔨 Build the project.
+4. ▶️ Run the `main.cpp` file.
+
+
+## What To Expect?
 The elliptic curve: y^2 mod 263 = (x^3+1x+1) mod 263
 
 Points on the curve (i.e. the group elements):
+```cpp
 (0, 1) (0, 262) (1, 23) (1, 240) (2, 96) (2, 167)
 (3, 89) (3, 174) (4, 73) (4, 190) (6, 111) (6, 152)
 (7, 80) (7, 183) (8, 28) (8, 235) (10, 119) (10, 144)
@@ -46,7 +79,7 @@ Points on the curve (i.e. the group elements):
 (246, 133) (249, 98) (249, 165) (251, 75) (251, 188) (253, 116)
 (253, 147) (254, 29) (254, 234) (259, 14) (259, 249) (260, 51)
 (260, 212)
-
+```
 some point P  = (1, 23), 2P = (87, 61)
 some point Q = (1, 240), P+Q = (0, 0)
 P += Q = (0, 0)
@@ -67,5 +100,3 @@ Encrypted message from A to B = {Pa,c1,c2} = {(3, 89), 240, 222}
 J's decrypted message from A = (93, 174)
 
 
-Steps to run-</br>
-[clone git ptoject -> import project->build->Run main.cpp

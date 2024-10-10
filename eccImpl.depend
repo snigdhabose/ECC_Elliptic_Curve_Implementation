@@ -1,0 +1,10 @@
+# depslib dependency file v1.0
+1638980828 source:c:\users\tirth\onedrive\documents\cpp\eccimpl\main.cpp
+	<cstdlib>
+	<iostream>
+	<vector>
+	<math.h>
+	"FiniteFieldElement.h"
+
+1638977416 c:\users\tirth\onedrive\documents\cpp\eccimpl\finitefieldelement.h
+
